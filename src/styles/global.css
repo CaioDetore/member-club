@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color styles */
+  --font-family: 'Oxygen', sans-serif;
+
+  --pink: rgba(214, 88, 179, 1);
+  --green: rgba(69, 180, 66, 1);
+
+  --white: rgba(255, 255, 255, 1);
+  --gray-100: rgba(244, 241, 242, 1);
+  --gray-200: rgba(233, 231, 233, 1);
+  --gray-300: rgba(223, 220, 223, 1);
+  --gray-400: rgba(206, 202, 205, 1);
+  --gray-500: rgba(117, 108, 113, 1);
+  --gray-600: rgba(74, 68, 72, 1);
+  --gray-700: rgba(51, 43, 49, 1);
+
+  /* Text-size styles */
+  --title-md: 600 2rem/1.4 var(--font-family);
+  --title-sm: 600 1.125rem/1.4 var(--font-family);
+  --subtitle-md: 600 0.875rem/1.4 var(--font-family);
+  --subtitle-sm: 600 0.75rem/1.4 var(--font-family);
+  --text-md: 400 1rem/1.4 var(--font-family);
+  --text-sm: 400 0.875rem/1.4 var(--font-family);
+  --text-xs: 400 0.75rem/1.4 var(--font-family);
+}
+
+body {
+  overflow: hidden;
+
+  font: var(--text-sm);
+  color: var(--gray-500);
+}
