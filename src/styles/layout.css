@@ -2,5 +2,13 @@
   width: 100vw;
   height: 100vh;
 
+  margin: 0 auto;
+  padding: 2rem 0.75rem;
   background-color: var(--gray-200);
+}
+
+@media (width >= 30em) {
+  #app {
+    padding: 4rem;
+  }
 }
