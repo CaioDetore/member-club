@@ -1,10 +1,14 @@
 #profile {
   grid-area: A;
-  
+  grid-row: 0fr / 1fr;
+
+  height: fit-content;
+
   display: flex;
   align-items: center;
 
   gap: 1rem;
+  padding: 1rem;
 
   & .profile-image-wrapper {
     width: 3.5rem;
