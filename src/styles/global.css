@@ -8,8 +8,8 @@
   /* Color styles */
   --font-family: 'Oxygen', sans-serif;
 
-  --pink: rgba(214, 88, 179, 1);
-  --green: rgba(69, 180, 66, 1);
+  --pink: #D658B3;
+  --green: #45B442;
 
   --white: rgba(255, 255, 255, 1);
   --gray-100: rgba(244, 241, 242, 1);
