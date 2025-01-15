@@ -2,13 +2,39 @@
   width: 100vw;
   height: 100vh;
 
-  margin: 0 auto;
   padding: 2rem 0.75rem;
   background-color: var(--gray-200);
+}
+
+.shape {
+  width: 100%;
+
+  padding: 1rem;
+  background-color: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  border-radius: 1rem;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 57rem;
+
+  display: grid;
+  grid-template-areas:
+    "A"
+    "C"
+    "B";
 }
 
 @media (width >= 30em) {
   #app {
     padding: 4rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+    grid-template-areas:
+      "A B"
+      "C B";
   }
 }

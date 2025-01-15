@@ -21,10 +21,10 @@
   --gray-700: rgba(51, 43, 49, 1);
 
   /* Text-size styles */
-  --title-md: 600 2rem/1.4 var(--font-family);
-  --title-sm: 600 1.125rem/1.4 var(--font-family);
-  --subtitle-md: 600 0.875rem/1.4 var(--font-family);
-  --subtitle-sm: 600 0.75rem/1.4 var(--font-family);
+  --title-md: 700 2rem/1.4 var(--font-family);
+  --title-sm: 700 1.125rem/1.4 var(--font-family);
+  --subtitle-md: 700 0.875rem/1.4 var(--font-family);
+  --subtitle-sm: 700 0.75rem/1.4 var(--font-family);
   --text-md: 400 1rem/1.4 var(--font-family);
   --text-sm: 400 0.875rem/1.4 var(--font-family);
   --text-xs: 400 0.75rem/1.4 var(--font-family);
