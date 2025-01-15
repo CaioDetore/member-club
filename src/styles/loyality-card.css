@@ -1,76 +1,201 @@
 #loyalty-card {
   grid-area: B;
 
-  overflow: hidden;
-  padding: 2.25rem 2rem;
+  & .card {
+    overflow: hidden;
+    padding: 1.25rem;
 
-  & .header {
-    width: 100%;
+    & .header {
+      width: 100%;
+      height: fit-content;
 
-    gap: 1rem;
-    display: flex;
-    justify-content: space-between;
-
-    & h1 {
-      color: var(--gray-500);
-      font: var(--subtitle-sm);
-      text-transform: uppercase;
-    }
-
-    & h2 {
-      color: var(--gray-500);
-      font: var(--text-sm);
-    }
-
-    & .card-id {
-      min-width: fit-content;
-
+      gap: 1rem;
       display: flex;
-      align-items: center;
+      justify-content: space-between;
 
-      border-radius: 999px;
-      padding: 0 0.75rem;
-      background-color: var(--gray-300);
+      & h1 {
+        color: var(--gray-500);
+        font: var(--subtitle-sm);
+        text-transform: uppercase;
+      }
 
-      font: var(--subtitle-md);
-      text-transform: uppercase;
+      & h2 {
+        color: var(--gray-500);
+        font: var(--text-sm);
+      }
+
+      & .card-id {
+        min-width: fit-content;
+        height: fit-content;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 999px;
+        padding: 0.37rem 0.75rem;
+        background-color: var(--gray-300);
+
+        font: var(--subtitle-md);
+        text-transform: uppercase;
+      }
+    }
+
+    & .badges-wrapper {
+      width: 100%;
+
+      gap: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+
+      margin-top: 1.25rem;
+
+      & .badge {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0.75rem;
+        border-radius: 1.25rem;
+        background-color: var(--gray-200);
+
+        & img {
+          width: 100%;
+          max-width: 4rem;
+
+          height: 100%;
+          max-height: 4rem;
+
+          object-fit: contain;
+        }
+
+        & .final-gift {
+          max-width: 2.5rem;
+          max-height: 2.5rem;
+        }
+      }
     }
   }
 
-  & .badges-wrapper {
-    width: 100%;
+  & .progress {
+    gap: 1.5rem;
 
-    gap: 1rem;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
 
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    padding: 1.68rem 2rem;
 
-    & .badge {
+    & > div {
       width: 100%;
-      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & h1 {
+        all: unset;
+        font: var(--text-sm);
+      }
+
+      & span {
+        font: var(--title-sm);
+      }
+    }
+
+    & .progress-bar {
+      margin-top: 0.25rem;
+
+      gap: 0.75rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      
+      & .bar-bg {
+        flex: 1;
+        height: 0.5rem;
+
+        border-radius: 999px;
+        background-color: var(--gray-300);
+
+        & .bar {
+          width: 70%;
+          height: 0.5rem;
+
+          border-radius: 999px;
+          background: linear-gradient(
+            90deg,
+            #2daa6e 0%,
+            #2daaaa 33%,
+            #856ccf 67%,
+            #d658b3 100%
+          );
+        }
+      }
+
+      & span {
+        width: fit-content;
+        display: inline-block;
+
+        font: var(--text-xs);
+      }
+    }
+
+    & .img-wrapper {
+      width: fit-content;
+      height: fit-content;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      padding: 0.75rem;
-      border-radius: 1.25rem;
+      padding: 0.5rem;
+      border-radius: 100%;
       background-color: var(--gray-200);
 
       & img {
-        width: 100%;
-        max-width: 4rem;
-
-        height: 100%;
-        max-height: 4rem;
+        width: 2.5rem;
+        height: 2.5rem;
 
         object-fit: contain;
       }
+    }
+  }
+}
 
-      & .final-gift {
-        max-width: 2.5rem;
-        max-height: 2.5rem;
+@media (width >= 80em) {
+  #loyalty-card {
+    & .card {
+      padding: 2.25rem 2rem;
+
+      & .badges-wrapper {
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+    }
+
+    & .progress {
+      gap: 2rem;
+      margin-top: 1rem;
+      padding: 1.68rem 2rem;
+
+      & > div {
+        & h1 {
+          font: var(--text-md);
+        }
+
+        & span {
+          font: var(--title-md);
+        }
+      }
+
+      & .img-wrapper {
+        & img {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
   }
