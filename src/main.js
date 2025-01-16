@@ -10,3 +10,6 @@ import "./styles/layout.css"
 import "./styles/profile.css"
 import "./styles/loyality-card.css"
 import "./styles/history.css"
+
+// JS
+import "./modules/search-click.js"

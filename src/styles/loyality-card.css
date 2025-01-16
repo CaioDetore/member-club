@@ -1,4 +1,4 @@
-#loyalty-card {
+#loyality-card {
   grid-area: B;
 
   & .card {
@@ -20,6 +20,7 @@
       }
 
       & h2 {
+        margin-top: 0.25rem;
         color: var(--gray-500);
         font: var(--text-sm);
       }
@@ -52,6 +53,8 @@
       & .badge {
         width: 100%;
         height: 100%;
+        min-width: 3.4rem;
+        min-height: 3.4rem;
 
         display: flex;
         align-items: center;
@@ -63,10 +66,7 @@
 
         & img {
           width: 100%;
-          max-width: 4rem;
-
           height: 100%;
-          max-height: 4rem;
 
           object-fit: contain;
         }
@@ -112,7 +112,7 @@
       display: flex;
       align-items: center;
       flex-direction: row;
-      
+
       & .bar-bg {
         flex: 1;
         height: 0.5rem;
@@ -166,13 +166,18 @@
 }
 
 @media (width >= 80em) {
-  #loyalty-card {
+  #loyality-card {
     & .card {
       padding: 2.25rem 2rem;
 
       & .badges-wrapper {
         gap: 1rem;
         margin-top: 2rem;
+
+        & .badge {
+          min-width: 5.5rem;
+          min-height: 5.5rem;
+        }  
       }
     }
 

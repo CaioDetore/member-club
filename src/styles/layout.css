@@ -16,7 +16,7 @@
   border-radius: 1rem;
 }
 
-.content {
+#content {
   margin: 0 auto;
   margin-top: 1.25rem;
   
@@ -36,7 +36,7 @@
     padding: 4rem;
   }
 
-  .content {
+  #content {
     gap: 1rem 1.5rem;
     margin-top: 4rem;
     
