@@ -2,7 +2,6 @@ import { apiConfig } from "./api-config";
 
 export async function cardFetchById({ id }) {
   try {
-    console.log(id)
     if (!id) {
       throw new Error("Informe o ID do cartão!", { cause: "custom" });
     }

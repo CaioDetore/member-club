@@ -1,5 +1,8 @@
 #history {
   grid-area: C;
+
+  max-height: 24rem;
+  overflow-y: auto;
   padding: 1.25rem 1.5rem;
 
   & h1 {
@@ -39,13 +42,13 @@
 
         padding: 0.25rem;
         border-radius: 999px;
-        background-color: #45B44212;
-        
+        background-color: #45b44212;
+
         & img {
           width: 1.31rem;
           height: 1.31rem;
-          
-          object-fit: contain; 
+
+          object-fit: contain;
         }
       }
     }
