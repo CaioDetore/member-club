@@ -44,7 +44,7 @@ export function showCard({ customer }) {
       const img = document.createElement("img");
       img.setAttribute("src", "./src/assets/icons/gift.svg");
       img.setAttribute("alt", "presente final");
-      img.classList.add("final-gift")
+      img.classList.add("final-gift");
       item.append(img);
     }
 
@@ -54,8 +54,34 @@ export function showCard({ customer }) {
   card.append(header, badges);
 
   // Progresso
+  const progress = document.createElement("div");
+  progress.classList.add("progress", "shape");
+  const progressInfo = document.createElement("div");
+  const remaining = document.createElement("h1");
 
-  loyalityCard.append(card);
+  let cutsText = "cortes restantes";
+  if (cutsRemaining === 1) {
+    cutsText = "corte restante";
+  }
+
+  remaining.innerHTML = `<span>${cutsRemaining}</span> ${cutsText}`;
+  progressInfo.append(remaining);
+
+  const progressBar = document.createElement("div");
+  progressBar.classList.add("progress-bar");
+  const barBg = document.createElement("div");
+  barBg.classList.add("bar-bg");
+  const bar = document.createElement("div");
+  bar.classList.add("bar");
+  bar.style.width = "70%";
+
+  barBg.append(bar);
+  progressBar.append(barBg);
+  progressInfo.append(progressBar);
+
+  progress.append(progressInfo);
+
+  loyalityCard.append(card, progress);
 
   return loyalityCard;
 }
