@@ -29,14 +29,22 @@ export function showCard({ customer }) {
   const badges = document.createElement("div");
   badges.classList.add("badges-wrapper");
 
-  for (let i = 0; i < cutsNeeded; i++) {
+  for (let i = 1; i <= cutsNeeded; i++) {
     const item = document.createElement("div");
     item.classList.add("badge");
 
-    if (totalCuts > i) {
+    if (totalCuts >= i) {
       const img = document.createElement("img");
       img.setAttribute("src", "./src/assets/PinCheck.png");
       img.setAttribute("alt", "checado");
+      item.append(img);
+    }
+
+    if (i === cutsNeeded) {
+      const img = document.createElement("img");
+      img.setAttribute("src", "./src/assets/icons/gift.svg");
+      img.setAttribute("alt", "presente final");
+      img.classList.add("final-gift")
       item.append(img);
     }
 
